@@ -1,0 +1,103 @@
+.navContainer{
+    display: flex;
+    height:100%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right:50px;
+}
+.navContainer >h1{
+    background-color: #77ff82;
+  background-image: linear-gradient(to top, #00a015 0%, #99f0ff 100%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.navbar-menu{
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+}
+.navbar-menu li{
+  padding:0 20px;
+  cursor: pointer;
+  transition: all 0.36s;
+  color:#ffffff;
+  font-size: 1rem;
+}
+.navbar-menu li:hover{
+    color:rgb(21, 165, 2);
+}
+.navbar-togglebtn{
+    cursor: pointer;
+}
+.navbar-togglebtn .bar {
+    display: none;
+    width: 25px;
+    height: 3px;
+    margin: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+  .navbar-togglebtn.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-togglebtn.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar-togglebtn.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+@media screen and (max-width:960px){
+    .navbar-togglebtn .bar{
+        display: block;
+    }
+    
+    .navContainer{
+        padding:0;
+    }
+    .navContainer >h1{
+        margin-left:10px;
+    }
+    .navbar-menu{
+        display: grid;
+        grid-template-columns: auto;
+        width:100%;
+        position: absolute;
+        top:-1000px;
+        opacity: 0;
+        z-index:-1;
+        height:50vh;
+        background: #000000;
+        transition: all 0.3s ease;
+    }
+    .navbar-menu.active{
+        top:100%;
+        z-index: 99;
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .navbar-menu li{
+       display: table;
+       width:100%;
+       padding:20px 20px;
+
+
+    }
+    .navbar-menu li:hover{
+        background:rgb(21, 165, 2);
+        color:#ffffff;
+    }
+    
+}

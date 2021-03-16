@@ -1,10 +1,13 @@
+import NavBar from './Components/NavBar/NavBar'
+import Content from './Components/Content/Content'
 import React from 'react';
-import './App.css'
+
 
 const App = (props) => {
     return (
                 <div>
-                    hi
+                    <NavBar/>
+                    <Content/>
                 </div>
     );
 }
